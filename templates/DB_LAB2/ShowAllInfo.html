@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <title>Lab 2 DB</title>
+</head>
+<body>
+
+{% include "./DB_LAB2/header.html" %}
+
+<div >
+      <table class="table table-hover table-bordered table-responsive">
+        <caption>
+            <h3><a href="./ShowAllInfo">All information</a></h3>
+        </caption>
+        <thead>
+            <th>Employee id</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Family</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Company car</th>
+            <th>Start of working</th>
+            <th>Company</th>
+            <th>Interests</th>
+
+        </thead>
+        <tbody>
+            {% for e in emp %}
+                <tr>
+                    <td> {{ e.id }} </td>
+                    <td> {{ e.name }} </td>
+                    <td> {{ e.birthday | date:"Y-m-d" }} </td>
+                    <td> {{ e.family }} </td>
+                    <td> {{ e.workplace.position }} </td>
+                    <td> {{ e.workplace.salary }} </td>
+                    <td> {{ e.workplace.company_car }} </td>
+                    <td> {{ e.workplace.start_of_working | date:"Y-m-d" }} </td>
+                    <td> {{ e.workplace.company }} </td>
+                    <td> {% for i in e.interests %}
+                        {{ i }},
+                         {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+<div>
+    <form action="ExactlySearch" method="post">{% csrf_token %}
+          <div class="input-append">
+              <label for="DateSearch">Find employees from company: </label>
+              <input name="name" type="text" placeholder="company name">
+              <button type="submit" value="Search">Search</button>
+          </div>
+    </form>
+</div>
+<div>
+    <form action="BooleanModeSearch" method="post">{% csrf_token %}
+          <div class="input-append">
+              <label for="DateSearch">Find employees: </label>
+              <input name="name" type="text" placeholder="name">
+              <button type="submit" value="Search">Search</button>
+          </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

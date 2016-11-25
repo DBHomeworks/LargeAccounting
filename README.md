@@ -1,2 +1,2 @@
-# LargeAccounting
-NonSQL databases, third lab
+# Lab2DBXml
+NonSQL databases, second lab

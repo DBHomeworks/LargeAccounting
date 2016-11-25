@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data>
+	<employees>
+		<employee employee_id="1" employee_name="Taras Lavrenyuk" date_of_birthday="1997-03-22" family="0" workplace_id="1"></employee>
+		<employee employee_id="2" employee_name="Alexander Kozhokar" date_of_birthday="1996-09-11" family="0" workplace_id="3"></employee>
+		<employee employee_id="3" employee_name="Erik Gimiranov" date_of_birthday="1996-12-21" family="0" workplace_id="2"></employee>
+		<employee employee_id="4" employee_name="Dmitriy Kropenko" date_of_birthday="1996-10-13" family="0" workplace_id="4"></employee>
+		<employee employee_id="5" employee_name="Vladislav Patsiuk" date_of_birthday="1997-07-18" family="0" workplace_id="5"></employee>
+		<employee employee_id="6" employee_name="Andriy Sushchik" date_of_birthday="1996-11-16" family="0" workplace_id="6"></employee>
+		<employee employee_id="7" employee_name="Karim Khuder" date_of_birthday="1997-03-02" family="0" workplace_id="7"></employee>
+		<employee employee_id="8" employee_name="Boris Topchiev" date_of_birthday="1997-08-23" family="0" workplace_id="8"></employee>
+		<employee employee_id="9" employee_name="Maksim Tsarikov" date_of_birthday="1997-07-16" family="0" workplace_id="9"></employee>
+		<employee employee_id="10" employee_name="Alexander Lysenko" date_of_birthday="1997-09-03" family="0" workplace_id="10"></employee>
+	</employees>
+	<workplaces>
+		<workplace workplace_id="1" company_id="1" position="Boss" salary="1000" comp_auto="1" start_of_working="2010-08-25"></workplace>
+		<workplace workplace_id="2" company_id="3" position="Manager" salary="500" comp_auto="0" start_of_working="2015-04-14"></workplace>
+		<workplace workplace_id="3" company_id="2" position="Lawyer" salary="800" comp_auto="1" start_of_working="2011-10-05"></workplace>
+		<workplace workplace_id="4" company_id="1" position="Junior developer" salary="500" comp_auto="0" start_of_working="2016-02-16"></workplace>
+		<workplace workplace_id="5" company_id="2" position="Helper" salary="350" comp_auto="0" start_of_working="2014-05-25"></workplace>
+		<workplace workplace_id="6" company_id="5" position="Courier" salary="280" comp_auto="1" start_of_working="2013-07-13"></workplace>
+		<workplace workplace_id="7" company_id="6" position="Assistant" salary="350" comp_auto="1" start_of_working="2010-08-02"></workplace>
+		<workplace workplace_id="8" company_id="4" position="Boss" salary="1200" comp_auto="1" start_of_working="2014-05-23"></workplace>
+		<workplace workplace_id="9" company_id="4" position="Security" salary="300" comp_auto="1" start_of_working="2015-07-09"></workplace>
+		<workplace workplace_id="10" company_id="2" position="Security" salary="280" comp_auto="0" start_of_working="2015-10-02"></workplace>
+	</workplaces>
+	<companies>
+		<company company_id="1" company_name="Bing"></company>
+		<company company_id="2" company_name="Google"></company>
+		<company company_id="3" company_name="Yahoo"></company>
+		<company company_id="4" company_name="Yandex"></company>
+		<company company_id="5" company_name="Microsoft"></company>
+		<company company_id="6" company_name="Apple"></company>		
+	</companies>
+</data>
