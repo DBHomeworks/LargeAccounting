@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .class_db import MyDataDase
 from django.http import HttpResponseRedirect
 
+
 from .forms import IdForm
 
 db = MyDataDase()
@@ -66,3 +67,9 @@ def employeesinterests(request):
 def employeesfamily(request):
     info = db.EmployeesFamily()
     return render(request, 'DB_LAB2/familyposition.html', {'info': info})
+
+
+def add_employee(request):
+    db.insertEmployee()
+    emp = db.ShowAllInfo()
+    return render(request, 'DB_LAB2/ShowAllInfo.html', {'emp': emp})

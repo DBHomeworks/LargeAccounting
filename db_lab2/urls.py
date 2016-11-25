@@ -14,5 +14,5 @@ urlpatterns = [
     url(r'^CompaniesSalary$', views.companiessalary, name='CompaniesSalary'),
     url(r'^EmployeesInterests$', views.employeesinterests, name='EmployeesInterests'),
     url(r'^EmployeesFamily$', views.employeesfamily, name='EmployeesFamily'),
-
+    url(r'^AddEmployee$', views.add_employee, name='AddEmployee'),
     ]
