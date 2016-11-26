@@ -15,15 +15,6 @@
 {% include "./DB_LAB2/header.html" %}
 
 <div>
-    <form action="ExactlySearch" method="post">{% csrf_token %}
-          <div class="input-append">
-              <label for="DateSearch">Find employees from company: </label>
-              <input name="name" type="text" placeholder="company name">
-              <button type="submit" value="Search">Search</button>
-          </div>
-    </form>
-</div>
-<div>
     <form action="BooleanModeSearch" method="post">{% csrf_token %}
           <div class="input-append">
               <label for="DateSearch">Find employees: </label>
@@ -33,11 +24,18 @@
     </form>
 </div>
 <div>
+    <form action="AddEmployee" method="post">{% csrf_token %}
+          <div class="input-append">
+              <label for="DateSearch">Add employee: </label>
+              <input name="name" type="text" placeholder="name">
+              <button type="submit" value="Search">Add</button>
+          </div>
+    </form>
+</div>
+<div>
       <table class="table table-hover table-bordered table-responsive">
         <caption>
             <h3><a href="./">All information</a></h3>
-            <h3><a href="./AddEmployee">Add employee</a></h3>
-
         </caption>
         <thead>
             <th>Employee id</th>

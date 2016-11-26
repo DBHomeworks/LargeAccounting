@@ -70,6 +70,6 @@ def employeesfamily(request):
 
 
 def add_employee(request):
-    db.insertEmployee()
+    db.insertEmployee(request.POST['name'])
     emp = db.ShowAllInfo()
-    return render(request, 'DB_LAB2/ShowAllInfo.html', {'emp': emp})
+    return HttpResponseRedirect('/')

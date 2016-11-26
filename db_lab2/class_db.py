@@ -354,13 +354,13 @@ class MyDataDase:
                      'videogames', 'shess', 'humor']
         return interests[random.randint(0, len(interests)-1)]
 
-    def insertEmployee(self):
+    def insertEmployee(self, first_name):
         client = MongoClient()
         client = MongoClient('localhost', 27017)
         db = client.attendance_records
         employees = db.employee_info
         id = 60001
-        name = 'Tracey' + ' ' + self.getLastName()
+        name = first_name + ' ' + self.getLastName()
         bday = datetime.strptime(str(self.getBirthDate()), '%Y-%m-%d')
         family = random.randint(0, 1)
         position = self.getPosition()
